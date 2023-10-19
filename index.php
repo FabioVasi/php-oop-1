@@ -28,7 +28,30 @@ class Movie
         return $this->title;
     }
 
+    public function movieType($genre) {
+        array_push($this->type, $genre);
+    }
+
+    public function movieCast($actor) {
+        array_push($this->cast, $actor);
+    }
+
 }
+
+$avatar = new Movie('Avatar');
+
+$avatar->movieType('Science Fiction');
+$avatar->movieType('Action');
+$avatar->movieType('Adventure');
+$avatar->year = 2009;
+$avatar->vote = '4.5/5';
+$avatar->movieCast('Sam Worthington');
+$avatar->movieCast('Zoe Saldana');
+$avatar->movieCast('Sigourney Weaver');
+
+var_dump($avatar);
+
+
 
 ?>
 
