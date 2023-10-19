@@ -12,32 +12,7 @@ mettendo ciascuna classe nel proprio file e magari raggruppare tutte le classi i
 organizzando il layout dividendo la struttura ed i contenuti in file e parziali dedicati.
 */
 
-class Movie
-{
-    public $title = null;
-    public $type = [];
-    public $year;
-    public $vote;
-    public $cast = [];
-    public $director;
-
-    public function __construct($title) {
-        $this->title = $title;
-    }
-
-    public function title() {
-        return $this->title;
-    }
-
-    public function movieType($genre) {
-        array_push($this->type, $genre);
-    }
-
-    public function movieCast($actor) {
-        array_push($this->cast, $actor);
-    }
-
-}
+include __DIR__ . '/db.php';
 
 $avatar = new Movie('Avatar');
 
@@ -134,6 +109,10 @@ array_push($movieList, $avatar, $interstellar, $lordOfTheRings, $starWars);
                 <div class="card">
                     <h2><?php $movie->title ?></h2>
                     <h4><?php $movie->movieType ?></h4>
+                    <h4><?php $movie->year ?></h4>
+                    <h4><?php $movie->vote ?></h4>
+                    <h4><?php $movie->movieCast ?></h4>
+                    <h4><?php $movie->director ?></h4>
                 </div>
             </div>
 
