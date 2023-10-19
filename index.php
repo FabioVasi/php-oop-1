@@ -48,7 +48,7 @@ $interstellar->director = 'Christopher Nolan';
 
 
 
-$lordOfTheRings = new Movie('Lord Of The Ring\'s: Return Of The King');
+$lordOfTheRings = new Movie('The Lord Of The Ring\'s: Return Of The King');
 
 $lordOfTheRings->poster = 'https://cdn.europosters.eu/image/1300/posters/the-lord-of-the-rings-the-return-of-the-king-i104633.jpg';
 $lordOfTheRings->movieType('Fantasy');
