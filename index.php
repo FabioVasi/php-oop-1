@@ -14,7 +14,20 @@ organizzando il layout dividendo la struttura ed i contenuti in file e parziali 
 
 class Movie
 {
-    
+    public $title = null;
+    public $type = [];
+    public $year;
+    public $vote;
+    public $cast = [];
+
+    public function __construct($title) {
+        $this->title = $title;
+    }
+
+    public function title() {
+        return $this->title;
+    }
+
 }
 
 ?>
