@@ -106,13 +106,13 @@ array_push($movieList, $avatar, $interstellar, $lordOfTheRings, $starWars);
             <?php foreach ($movieList as $movie) : ?>
 
             <div class="col-3">
-                <div class="card">
-                    <h2><?php $movie->title ?></h2>
-                    <h4><?php $movie->movieType ?></h4>
-                    <h4><?php $movie->year ?></h4>
-                    <h4><?php $movie->vote ?></h4>
-                    <h4><?php $movie->movieCast ?></h4>
-                    <h4><?php $movie->director ?></h4>
+                <div class="card h-100">
+                    <h2><?php echo $movie->title ?></h2>
+                    <h5><?php echo $movie->movieType ?></h5>
+                    <h3><?php echo $movie->year ?></h3>
+                    <h3><?php echo $movie->vote ?></h3>
+                    <h5><?php echo $movie->movieCast ?></h5>
+                    <h3><?php echo $movie->director ?></h3>
                 </div>
             </div>
 
