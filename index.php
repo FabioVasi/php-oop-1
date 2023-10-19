@@ -19,6 +19,7 @@ class Movie
     public $year;
     public $vote;
     public $cast = [];
+    public $director;
 
     public function __construct($title) {
         $this->title = $title;
@@ -48,10 +49,61 @@ $avatar->vote = '4.5/5';
 $avatar->movieCast('Sam Worthington');
 $avatar->movieCast('Zoe Saldana');
 $avatar->movieCast('Sigourney Weaver');
+$avatar->director = 'James Cameron';
 
 var_dump($avatar);
 
 
+
+$interstellar = new Movie('Interstellar');
+
+$interstellar->movieType('Science Fiction');
+$interstellar->movieType('Action');
+$interstellar->movieType('Adventure');
+$interstellar->year = 2014;
+$interstellar->vote = '3.8/5';
+$interstellar->movieCast('Matthew McConaughey');
+$interstellar->movieCast('Anne Hathaway');
+$interstellar->movieCast('Matt Damon');
+$interstellar->director = 'Christopher Nolan';
+
+var_dump($interstellar);
+
+
+
+$lordOfTheRings = new Movie('Lord Of The Ring\'s: Return Of The King');
+
+$lordOfTheRings->movieType('Fantasy');
+$lordOfTheRings->movieType('Action');
+$lordOfTheRings->movieType('Adventure');
+$lordOfTheRings->movieType('Dramatic');
+$lordOfTheRings->year = 2004;
+$lordOfTheRings->vote = '4.8/5';
+$lordOfTheRings->movieCast('Elijah Wood');
+$lordOfTheRings->movieCast('Ian McKellen');
+$lordOfTheRings->movieCast('Viggo Mortensen');
+$lordOfTheRings->movieCast('Sean Austin');
+$lordOfTheRings->director = 'Peter Jackson';
+
+var_dump($lordOfTheRings);
+
+
+
+$starWars = new Movie('Star Wars: The Skywalker Saga');
+
+$starWars->movieType('Science Fiction');
+$starWars->movieType('Action');
+$starWars->movieType('Adventure');
+$starWars->movieType('Dramatic');
+$starWars->year = 1977;
+$starWars->vote = '4.4/5';
+$starWars->movieCast('Mark Hamill');
+$starWars->movieCast('Harrison Ford');
+$starWars->movieCast('Carrie Fisher');
+$starWars->movieCast('Ian McDiarmid');
+$starWars->director = 'George Lucas';
+
+var_dump($starWars);
 
 ?>
 
