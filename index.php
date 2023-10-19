@@ -105,6 +105,12 @@ $starWars->director = 'George Lucas';
 
 var_dump($starWars);
 
+
+
+$movieList = [];
+
+array_push($movieList, $avatar, $interstellar, $lordOfTheRings, $starWars);
+
 ?>
 
 <!DOCTYPE html>
@@ -118,12 +124,21 @@ var_dump($starWars);
 </head>
 <body>
     
-    <div class="container">
-        <h1></h1>
+    <div class="container text-center">
+        <h1>Movie Card's</h1>
         <div class="row">
+
+            <?php foreach ($movieList as $movie) : ?>
+
             <div class="col-3">
-                <div class="card"></div>
+                <div class="card">
+                    <h2><?php $movie->title ?></h2>
+                    <h4><?php $movie->movieType ?></h4>
+                </div>
             </div>
+
+            <?php endforeach ?>
+
         </div>
     </div>
 
